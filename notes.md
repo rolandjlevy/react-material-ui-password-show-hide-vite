@@ -46,3 +46,26 @@
     backgroundColor: '#e8f0fe',
   },
 ```
+
+### Accordian
+
+- https://stackoverflow.com/questions/60513173/how-to-add-an-event-listener-to-useref-in-useeffect
+- https://stackoverflow.com/questions/53807894/material-ui-transition-out-and-in-on-single-button-click
+- http://reactcommunity.org/react-transition-group/transition#Transition-prop-addEndListener
+- https://mui.com/api/accordion/
+- https://mui.com/components/accordion/
+- http://reactcommunity.org/react-transition-group/transition
+- https://stackoverflow.com/questions/57232334/where-to-put-callback-function-in-react-transition-group
+
+```js
+addEndListener = {(node, done) => {
+  // use the css transitionend event to mark the finish of a transition
+  node.addEventListener('transitionend', done, false);
+}};
+
+addEndListener={(node) => {
+  node.addEventListener("transitionend", () => {
+    console.log("done!");
+  }, false );
+}}
+```
